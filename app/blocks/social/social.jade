@@ -1,0 +1,12 @@
+include ../icon/icon
+
+mixin social()
+	.social&attributes(attributes)
+		a.social__link.social__link_vk(href="#") Vk
+			+icon('vk', true).social__icon
+		a.social__link.social__link_fb(href="#") Facebook
+			+icon('facebook', true).social__icon
+		a.social__link.social__link_twitter(href="#") Twitter
+			+icon('twitter', true).social__icon
+		a.social__link.social__link_inst(href="#") Instagram
+			+icon('instagram', true).social__icon

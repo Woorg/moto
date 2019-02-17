@@ -1,0 +1,25 @@
+include ../nav/nav
+include ../phone/phone
+
+mixin header()
+	header.header&attributes(attributes)
+		.header__top
+			.header__in
+				a.header__logo.logo(href="/")
+					img(src="assets/images/general/logo.png", alt="Classon motors") 
+				.header__info
+					+phone().header__phone(href="tel:+79789500059")
+
+					a.header__h-basket.h-basket(href='#')
+						.h-basket__quant 0
+						.h-basket__text Корзина 
+						.h-basket__price 0.00 
+							.h-basket__price_rub ₽
+		.header__bottom
+			.header__in
+				+nav().header__nav
+				a.header__p-area.p-area(href="#")
+					span.p-area__text Личный кабинет
+
+
+

@@ -1,0 +1,30 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/header/header
+include /blocks/main/main
+include /blocks/sidebar/sidebar
+include /blocks/content/content
+include /blocks/slider/slider
+
+include /blocks/services/services
+include /blocks/new/new
+include /blocks/sales/sales
+
+include /blocks/footer/footer
+
+
+
+block head
+	- var pageTitle = 'Главная';
+
+block content
+	+header()
+	+main().page__main
+		.page__in
+			+sidebar().page__sidebar
+			+content().page__content
+				+slider().page__slider
+				+services().page__services
+				+new().page__new
+				+sales().page__sales
+	+footer()

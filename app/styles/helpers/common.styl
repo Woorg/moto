@@ -1,0 +1,155 @@
+// General body styles
+
+.in
+	margin auto
+	padding-left 15px
+	padding-right 15px
+	max-width 1170px
+	width 100%
+
+.page
+	background-color #ffffff
+	display flex
+	flex-direction column
+	min-height 100vh
+	font-display swap
+	font-family $c
+	font-weight normal
+	font-size 14px
+	color #000000
+	&__main
+		padding-top 20px
+	&__in
+		@extends .in
+		margin 0 auto
+	&__sidebar
+		margin-right 15px
+		width 280px
+		width 24.56%
+		+r($tM)
+			margin-right 0
+			width 100%
+	&__content
+		width 848px
+		width 74.38%
+		+r($tM)
+			width 100%
+	&__slider
+		margin-bottom 20px
+
+
+// Sticky footer
+.main
+	flex 1 0 auto
+
+.title
+	position relative
+	border-bottom 1px solid #e8e8e8
+	font-size 25px
+	font-family $c
+	line-height 1
+	text-transform uppercase
+	color #333d3d
+	span
+		position absolute
+		top 50%
+		left 50%
+		padding-left 14px
+		padding-right 14px
+		background #fff
+		transform translate(-50%, -50%)
+
+
+// Buttons
+
+.button
+	border none
+	padding-top 17px
+	padding-right 27px
+	padding-bottom 16px
+	padding-left 27px
+	display inline-block
+	vertical-align top
+	background-color #ed1c24
+	font-size 14px
+	font-weight normal 
+	text-transform uppercase
+	tr(background-color .3s ease)
+	+r($m)
+		padding-top 10px
+		padding-right 10px
+		padding-bottom 10px
+		padding-left 10px
+		font-size 12px
+	&:hover
+		background-color darken(#ed1c24, 10)
+		tr(background-color .3s ease)
+.wysiwyg
+	color #40291d
+	h2,
+	h3
+		margin-bottom 35px
+		font-size 36px
+		font-weight 400
+		line-height 1.333
+		letter-spacing .36px
+		
+	p
+		margin-bottom 30px
+		font-weight 400
+		font-size 16px
+		line-height 1.5
+		letter-spacing .16px
+		&:last-child
+			margin-bottom 0
+	blockquote
+		border-left 2px solid #c42141
+		margin-bottom 57px
+		padding-left 54px
+		font-style italic
+		font-size 16px
+		font-weight 500
+		line-height 1.5
+		letter-spacing .16px
+	
+
+	ol,
+	ul
+		margin-left 19px
+		margin-bottom 40px
+	li
+		position relative
+		padding-left 40px
+		margin-bottom 16px
+		font-size 24px
+		font-weight 400
+		line-height 1.25
+		letter-spacing .24px
+		&:after
+			position absolute
+			top 50%
+			left 0
+			content ""
+			width 10px
+			height 10px
+			background-color #c42141
+			transform translateY(-50%)
+	table
+		// margin-bottom 45px
+		font-size 24px
+		font-weight 500
+		line-height 1.25
+		letter-spacing .24px
+	
+		th,
+		td
+			padding 14px 34px 14px 26px
+		th
+			border 2px solid #fff
+			background-color #c42141
+			color #fff
+		td
+			border 2px solid #bfbfbf
+			background-color #f4f4f4
+
+

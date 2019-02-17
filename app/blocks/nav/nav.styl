@@ -1,0 +1,98 @@
+.nav
+	width 100%
+	&__button
+		border none
+		margin 0
+		padding 0
+		width 30px
+		height 30px
+		background transparent
+		display none
+		+r($tM)
+			display block
+		&:hover
+			opacity .8
+	&__button_active
+		.nav__button-icon
+			// display none
+			visuallyhidden()
+			opacity 0
+			tr(opacity .3s ease)
+		.nav__button-close
+			// display block
+			visibility visible
+			opacity 1
+			tr(opacity .3s ease)
+	&__button-icon,
+	&__button-close
+		width 30px
+		height 30px
+		fill #fff
+		opacity 1
+		visibility visible
+		tr(opacity .3s ease)
+	&__button-close
+		// display none
+		visibility hidden
+		opacity 0
+
+	&__list
+		display flex
+		flex-flow row
+		justify-content space-between
+		+r($tM)
+			display none			
+	// &__item
+	// 	&:first-child
+			
+	// 	&:last-chlid
+
+
+	&__link
+		padding-top 17px
+		padding-bottom 18px
+		color #fff
+		font-size 16px
+		text-decoration none
+		tr(color .3s ease)
+		&:hover
+			color darken(#fff, 10)
+			tr(color .3s ease)
+
+
+.nav_active
+	.nav__list
+		position absolute
+		top 100%
+		left 0
+		right 0
+		display block
+		background #ed1c24
+		text-align center
+	.nav__item
+		border-bottom 1px solid rgba(255,255,255, .4)
+		&:last-child
+			border-bottom 1px solid transparent
+	.nav__link
+		display block
+
+
+.nav_second
+	.nav__button
+		+r($tM)
+			display none
+
+	.nav__list
+		+r($tM)
+			display flex
+			justify-content center
+			flex-wrap wrap
+	
+	.nav__item
+		+r(586px)
+			margin-right 10px
+			margin-bottom 10px
+
+		&:last-child
+			margin-right 0
+

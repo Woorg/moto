@@ -1,0 +1,21 @@
+include ../nav/nav
+include ../phone/phone
+include ../social/social
+
+mixin footer()
+	footer.footer&attributes(attributes)
+		.footer__top
+			.footer__in
+				a.footer__logo.logo(href="#")
+					img(src="assets/images/general/logo.png", alt="Classon motors")
+		.footer__body
+			.footer__in
+				+nav().nav_second.footer__nav
+				.footer__contacts
+					+phone().phone_second.footer__phone(href="tel:+79789500059")
+					a.footer__email(href="mailto:info@rent-moto.ru") info@rent-moto.ru
+				+social().footer__social
+
+		.footer__bottom
+			.footer__in
+				.footer__copyright &copy; 2019

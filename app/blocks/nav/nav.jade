@@ -1,0 +1,22 @@
+include ../icon/icon
+
+mixin nav()
+	nav.nav&attributes(attributes)
+		button.nav__button
+			+icon('burger', true).nav__button-icon
+			+icon('close', true).nav__button-close
+		ul.nav__list
+			li.nav__item
+				a.nav__link(href="#link-1") Главная
+			li.nav__item
+				a.nav__link(href="#link-2") О магазине
+			li.nav__item
+				a.nav__link(href="#link-3") Новости
+			li.nav__item
+				a.nav__link(href="#link-4") Акции
+			li.nav__item
+				a.nav__link(href="#link-5") Оплата
+			li.nav__item
+				a.nav__link(href="#link-6") Доставка
+			li.nav__item
+				a.nav__link(href="#link-7") Контакты

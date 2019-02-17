@@ -1,0 +1,70 @@
+.sidebar
+	&__sidenav
+		margin-bottom 20px
+
+.sidenav
+	&__title
+
+		border none
+		border-bottom 2px solid #ed1c24
+		padding-top 22px
+		padding-bottom 20px
+		width 100%
+		display block
+		background-color #e8e8e8
+		text-align center
+		font-size 16px
+		text-transform uppercase
+		font-weight bold
+		span
+			position relative
+			&:after
+				position absolute
+				top calc(50% + 1px)
+				right -15px
+				content ''
+				width 0
+				height 0
+				border-style solid
+				border-width 5px 5px 0 5px
+				border-color #000 transparent transparent transparent
+				transform translateY(-50%)
+	&__title_active
+		span
+			&:after
+				transform translateY(-50%) rotate(180deg)
+	&__list
+		+r($tM)
+			display none
+			visibility hidden
+			opacity 0
+			tr(opacity .3s ease)
+
+	.sidenav__list_active
+		display block
+		visibility visible
+		opacity 1
+		tr(opacity .3s ease)
+
+	&__item
+		border-bottom 1px solid #e8e8e8
+		background-color #fafafa
+		tr(background .3s ease)
+		&:last-child
+			border-bottom 1px solid transparent
+		&:hover
+			background darken(#fafafa, 10)
+			tr(background .3s ease)
+	&__item_alert
+		.sidenav__link
+			color #ed1c24
+	&__link
+		padding-top 11px
+		padding-right 15px
+		padding-bottom 12px
+		padding-left 34px
+		display block
+		font-size 16px
+		font-weight normal
+		color #010101
+		text-decoration none

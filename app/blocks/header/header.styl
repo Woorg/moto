@@ -1,0 +1,146 @@
+.header
+	position relative
+	z-index 2
+	&__in
+		@extends .in
+	&__top
+		padding-top 11px
+		padding-bottom 9px
+		min-height 80px
+		background #000
+		+r($m)
+			padding-bottom 20px
+		.header__in
+			height 100%
+			display flex
+			flex-flow row wrap
+			justify-content space-between
+			align-items center
+			+r($m)
+				justify-content center
+	// &__logo
+	&__info
+		max-width 460px
+		min-height 48px
+		display flex
+		flex-flow row
+		align-items center
+		+r($m)
+			flex-wrap wrap
+			justify-content center
+	&__phone
+		position relative
+		padding-top 12px
+		padding-bottom 16px
+		padding-right 25px
+		&:before
+			position absolute
+			top 50%
+			right 0
+			width 1px
+			height 48px
+			content ""
+			background #333333
+			transform translateY(-50%)
+			+r($m)
+				display none
+
+
+	&__h-basket
+		margin-left 25px
+		display flex
+		justify-content flex-start
+		align-items center
+		+r($m)
+			margin-left 0
+	&__bottom
+		height 48px
+		background-color #ed1c24
+		.header__in
+			height 100%
+			display flex
+			flex-flow row nowrap
+			justify-content space-between
+			align-items center
+	&__nav
+		margin-right 20px
+		max-width 900px
+		+r($tM)
+			max-width 800px
+		
+
+	&__p-area
+		min-width 140px
+
+.logo
+	display flex
+	max-width $logo_width
+	height $logo_height
+	img
+		respimg()
+		
+.h-basket
+
+	position relative
+	padding-left 28px
+	display flex
+	flex-flow row 
+	justify-content flex-start
+	align-items center
+	color #fff
+	text-decoration none
+	&:after
+		position absolute
+		top 50%
+		left 0
+		content ''
+		retinaSprite($h_basket_group)
+		transform translateY(-50%)
+	&__quant
+		margin-right 10px
+		padding-top 4px
+		padding-bottom 5px
+		width 18px
+		height 18px
+		background-color #ed1c24
+		font-family $p
+		font-size 12px
+		font-weight normal
+		text-align center
+		border-radius 50%
+	&__text
+		margin-right 17px
+		font-size 14px
+	&__price
+		font-size 16px
+		display flex
+		flex-flow row 
+		justify-content flex-start
+	&__price_rub
+		margin-left 6px
+		font-weight normal
+		font-size 15px
+
+
+.p-area
+	position relative
+	z-index 1
+	padding-left 33px
+	color #fff
+	font-size 14px
+	text-decoration none
+	&:after
+		position absolute
+		top 50%
+		left 0
+		content ''
+		retinaSprite($personal_group)
+		transform translateY(-50%)
+	&__text
+		border-bottom 1px dotted #fff
+		padding-bottom 4px
+		tr(border-bottom .3s ease)
+	&:hover
+		.p-area__text
+			border-bottom 1px dotted transparent
+			tr(border-bottom .1s ease)

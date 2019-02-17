@@ -1,0 +1,42 @@
+.social
+	display flex
+	justify-content center
+	align-items center
+	&__link
+		position relative
+		margin-left 24px
+		width 38px
+		height 38px
+		background #1a1a1a
+		text-indent -9999px
+		text-align left
+		fill #fff
+		border-radius 50%
+		tr(opacity .3s ease)
+		&:first-child
+			margin-left 0
+		&:hover
+			opacity .8
+			tr(opacity .3s ease)
+	&__link_vk
+		.social__icon
+			width 18px
+			height 11px
+	&__link_fb
+		.social__icon
+			width 10px
+			height 18px
+	&__link_twitter
+		.social__icon
+			width 16px
+			height 13px
+	&__link_inst
+		.social__icon
+			width 17px
+			height 17px
+
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)

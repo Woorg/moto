@@ -1,0 +1,51 @@
+.footer
+	background-color #000000
+	&__in
+		@extends .in
+		text-align center
+		color #fff
+	&__top
+		padding-top 22px
+
+	&__logo
+		margin auto
+		margin-bottom 22px
+		
+
+	&__body
+		padding-bottom 26px
+
+	&__nav
+		margin auto
+		margin-bottom 32px
+		max-width 900px
+
+	// &__contacts
+
+	&__phone,
+	&__email
+		font-size 18px
+		text-decoration none
+		
+	.footer__phone
+		margin-bottom 18px
+		justify-content center
+
+	&__email
+		color #fff
+		font-size 18px
+		tr(color .3s ease)
+		&:hover
+			color darken(#fff, 10)
+			tr(color .3s ease)
+
+	&__social
+		margin-top 36px
+	&__bottom
+		border-top 1px solid #333333
+		padding-top 11px
+		padding-bottom 15px
+
+	&__copyright
+		color #808080
+		font-size 14px

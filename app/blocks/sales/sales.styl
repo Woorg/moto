@@ -1,0 +1,173 @@
+.sales
+	padding-top 26px
+	padding-bottom 26px
+	&__title
+		margin-bottom 57px
+		
+	&__list
+		margin-left -15px
+		margin-right -15px
+		display flex
+		flex-flow row
+		justify-content flex-start
+		align-self auto
+	.slick-slide
+		padding-left 15px
+		padding-right 15px
+	&__item
+		position relative
+		border 1px solid #e8e8e8
+		// margin-left 15px
+		// margin-right 15px
+		background-color #ffffff
+		width 262px
+		height 367px
+		display flex
+		flex-direction column
+
+	// &__link
+	// 	position absolute
+	// 	z-index 1
+	// 	top 0
+	// 	left 0
+	// 	right 0
+	// 	bottom 0
+
+	&__image
+		position relative
+		border-bottom 1px solid #d1d1d1
+		margin-left 15px
+		margin-right 15px
+		min-height 221px
+		overflow hidden
+		img 
+			position absolute
+			top 50%
+			left 50%
+			object-fit cover
+			transform translate(-50%, -50%)
+	&__badge
+		position absolute
+		z-index 1
+		top 0
+		right -14px
+		padding-top 4px
+		padding-right 10px
+		padding-bottom 5px
+		padding-left 10px
+		background-color #7cb84f
+		color #fff
+		font-size 13px
+		font-weight bold
+		text-transform uppercase
+
+	&__text
+		margin-top 15px
+		margin-bottom 28px
+		max-height 82px
+		min-height 54px
+		display flex
+		justify-content center
+		align-items center
+		
+		font-size 14px
+		text-align center
+		line-height 1.3
+		overflow hidden
+
+
+	&__bottom
+		margin-left 17px
+		margin-right 17px
+		display flex
+		height 30px
+		justify-content center
+		align-items center
+	&__price
+		border 1px solid #ed1c24
+		border-width 1px 0 1px 1px
+		padding-top 4px
+		padding-right 8px
+		padding-bottom 4px
+		padding-left 8px
+		height 100%
+		flex-grow 1
+		flex-basis 80px
+		font-size 20px
+		font-weight 700
+		text-align center
+	&__price-cur
+		font-size 16px
+	&__priceold
+		position absolute
+		top -20px
+		left 30px
+		color #d1d1d1
+		font-size 16px
+		text-decoration line-through
+	&__priceold-cur
+		padding-left 2px
+		font-size 14px
+	&__to-cart
+		position relative
+		padding-top 8px
+		padding-right 8px
+		padding-bottom 8px
+		padding-left 10px
+		height 100%
+		flex-grow 1
+		background-color #ed1c24
+		color #fff
+		font-size 14px
+		text-decoration none
+		tr(background-color .3s ease)
+		&:after
+			position absolute
+			top 50%
+			right 8px
+			content ''
+			retinaSprite($basket_group)
+			transform translateY(-50%)
+		&:hover
+			background-color darken(#ed1c24, 10)
+			tr(background-color .3s ease)
+	&__arrow
+		position absolute
+		top 50%
+		left calc(50% + 1px)
+		width 5px
+		height 10px
+		fill #b6b6b6
+		transform translate(-50%, -50%)
+		
+	.slick-arrow
+		width 27px
+		height 27px
+		background-color #e8e8e8
+		cursor pointer
+		border-radius 50%
+		tr(opacity .3s ease)
+		&:before
+			display none
+		&:hover
+			opacity .8
+			tr(opacity .3s ease)
+	.slick-next,
+	&__next
+		top 50%
+		right -14px
+		// top calc(50% - 40px)
+		+r(586px)
+			right 0
+	.slick-prev,
+	&__prev
+		z-index 1
+		top 50%
+		left -14px
+		// top calc(50% - 40px)
+		transform translateY(-50%) rotate(180deg) 
+		+r(586px)
+			left 0
+
+
+	

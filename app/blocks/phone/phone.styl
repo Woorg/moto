@@ -1,0 +1,39 @@
+.phone
+	position relative
+	padding-left 34px
+	color #fff
+	display flex
+	justify-content flex-start
+	align-items baseline
+	font-size 18px
+	font-weight bold
+	line-height 1
+	text-transform uppercase
+	text-decoration none
+	tr(color .3s ease)
+	+r(586px)
+		font-size 14px
+	&:after
+		position absolute
+		content ''
+		top 50%
+		left 0
+		retinaSprite($phone_group)
+		transform translateY(-50%)
+	&:hover
+		color darken(#fff, 10)
+		tr(color .3s ease)
+	&__code
+		padding-right 5px
+		font-size 14px
+
+
+.phone_second
+	padding-left 0
+	font-weight normal
+	font-size 18px
+	&:after
+		display none
+
+	.phone__code
+		font-size 18px

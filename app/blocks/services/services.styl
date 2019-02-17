@@ -1,0 +1,67 @@
+.services
+	display flex
+	flex-flow row
+	justify-content space-between
+	align-items flex-start
+	+r(586px)
+		flex-wrap wrap
+	&__service
+		position relative
+		padding-top 82px
+		padding-bottom 16px
+		// width 33.3%
+		flex-basis 33.3%
+		min-height 130px
+		text-align center
+		text-decoration none
+		color #000
+		tr(background-color .3s ease)
+		+r(586px)
+			flex-basis 100%
+		&:hover
+			tr(background-color .3s ease)
+	&__service_rent
+		background-color #e8e8e8
+		&:hover
+			background-color darken(#e8e8e8, 10)
+			
+		.services__icon
+			top 25px
+			retinaSprite($rent_group)
+
+	&__service_service
+		background-color #d1d1d1
+		&:hover
+			background-color darken(#d1d1d1, 10)
+		.services__icon
+			top 12px
+			retinaSprite($service_group)
+	&__service_tour
+		background-color #b6b6b6
+		&:hover
+			background-color darken(#b6b6b6, 10)
+		.services__icon
+			top 12px
+			retinaSprite($tour_group)
+
+	&__icon
+		position absolute
+		top 0	
+		left 50%
+		transform translateX(-50%)
+
+	&__text
+		position relative
+		padding-bottom 11px
+		font-size 18px
+		text-transform uppercase
+		font-weight bold
+		&:after
+			position absolute
+			content ''
+			top 100%
+			left 50%
+			width 89px
+			height 2px
+			background-color #ed1c24
+			transform translateX(-50%)
